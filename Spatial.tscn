@@ -1,0 +1,150 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://suelo.obj" type="ArrayMesh" id=1]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_color = Color( 0, 0.415686, 1, 1 )
+
+[sub_resource type="CapsuleMesh" id=2]
+material = SubResource( 1 )
+radius = 0.51
+mid_height = 2.0
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.53
+height = 2.0
+
+[sub_resource type="ProceduralSky" id=4]
+
+[sub_resource type="Environment" id=5]
+background_mode = 2
+background_sky = SubResource( 4 )
+
+[node name="Spatial" type="Spatial"]
+
+[node name="SoftBody" type="SoftBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254978, 7.61788, 0 )
+mesh = ExtResource( 1 )
+material/0 = null
+simulation_precision = 50
+ray_pickable = false
+
+[node name="capsula" type="MeshInstance" parent="."]
+transform = Transform( -1.60206e-07, 0.636428, 0.771336, -2.96173e-08, 0.771336, -0.636428, -1, -1.24805e-07, -1.04723e-07, 0, 2, 0 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula2" type="MeshInstance" parent="."]
+transform = Transform( -1.4355e-07, 0.370979, 0.928641, -7.70484e-08, 0.928641, -0.370979, -1, -1.24805e-07, -1.04723e-07, 0.663649, 0.26359, 0.073204 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula2"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula2/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula3" type="MeshInstance" parent="."]
+transform = Transform( -1.4355e-07, 0.370979, 0.928641, -7.70484e-08, 0.928641, -0.370979, -1, -1.24805e-07, -1.04723e-07, 0.663649, 0.26359, -0.977798 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula3"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula3/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula4" type="MeshInstance" parent="."]
+transform = Transform( -1.4355e-07, 0.370979, 0.928641, -7.70484e-08, 0.928641, -0.370979, -1, -1.24805e-07, -1.04723e-07, 0.663649, 0.26359, -1.9778 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula4"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula4/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula5" type="MeshInstance" parent="."]
+transform = Transform( -1.4355e-07, 0.370979, 0.928641, -7.70484e-08, 0.928641, -0.370979, -1, -1.24805e-07, -1.04723e-07, 0.663649, 0.26359, 1.0222 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula5"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula5/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula6" type="MeshInstance" parent="."]
+transform = Transform( -1.4355e-07, 0.370979, 0.928641, -7.70484e-08, 0.928641, -0.370979, -1, -1.24805e-07, -1.04723e-07, 0.663649, 0.26359, 2.0222 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula6"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula6/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula7" type="MeshInstance" parent="."]
+transform = Transform( -9.18382e-08, -0.0991113, 0.995076, -1.34569e-07, 0.995076, 0.0991113, -1, -1.24805e-07, -1.04723e-07, 2.8513, -0.626007, 0.073204 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula7"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula7/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula8" type="MeshInstance" parent="."]
+transform = Transform( -9.18382e-08, -0.0991113, 0.995076, -1.34569e-07, 0.995076, 0.0991113, -1, -1.24805e-07, -1.04723e-07, 2.8513, -0.626007, -0.977798 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula8"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula8/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula9" type="MeshInstance" parent="."]
+transform = Transform( -9.18382e-08, -0.0991113, 0.995076, -1.34569e-07, 0.995076, 0.0991113, -1, -1.24805e-07, -1.04723e-07, 2.8513, -0.626007, -1.9778 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula9"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula9/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula10" type="MeshInstance" parent="."]
+transform = Transform( -9.18382e-08, -0.0991113, 0.995076, -1.34569e-07, 0.995076, 0.0991113, -1, -1.24805e-07, -1.04723e-07, 2.8513, -0.626007, 1.0222 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula10"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula10/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="capsula11" type="MeshInstance" parent="."]
+transform = Transform( -9.18382e-08, -0.0991113, 0.995076, -1.34569e-07, 0.995076, 0.0991113, -1, -1.24805e-07, -1.04723e-07, 2.8513, -0.626007, 2.0222 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="capsula11"]
+
+[node name="CollisionShape" type="CollisionShape" parent="capsula11/StaticBody"]
+shape = SubResource( 3 )
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 0.601147, -0.472514, 0.644479, 0, 0.806467, 0.591279, -0.799138, -0.355446, 0.484805, 6.67849, 7.1765, 4.39841 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 5 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.09025, -0.962825, 0.254605, 0, 0.255648, 0.96677, -0.995919, -0.087251, 0.0230723, 0, 6.14849, 6.94083 )
+shadow_enabled = true
